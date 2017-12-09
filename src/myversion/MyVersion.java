@@ -3,8 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package myversion;
-
 /**
  *
  * @author braukhoffna
@@ -36,45 +34,45 @@ public class MyVersion {
         c1.addPet(p6);
         
  
-        for (int i = 0; i < c1.getNumerOfPets(); i++)
+        for (int i = 0; i < c1.getNumberOfPets(); i++)
             System.out.println(c1.getpetlist()[i].getID() + " " + c1.getpetlist()[i].getName());
-        System.out.println(c1.getNumerOfPets()); 
+        System.out.println(c1.getNumberOfPets());
         
        System.out.println(" ");  
        c1.remove("Nate");
-       for (int i = 0; i < c1.getNumerOfPets(); i++)
+       for (int i = 0; i < c1.getNumberOfPets(); i++)
        System.out.println(c1.getpetlist()[i].getID() + " " + c1.getpetlist()[i].getName());
-       System.out.println(c1.getNumerOfPets());
+       System.out.println(c1.getNumberOfPets());
            
         System.out.println(" ");  
         c1.remove("snowball");
-        for (int i = 0; i < c1.getNumerOfPets(); i++)
+        for (int i = 0; i < c1.getNumberOfPets(); i++)
             System.out.println(c1.getpetlist()[i].getID() + " " + c1.getpetlist()[i].getName());
-        System.out.println(c1.getNumerOfPets()); 
+        System.out.println(c1.getNumberOfPets());
        
         System.out.println(" ");
         c1.remove("Greg");
-        for (int i = 0; i < c1.getNumerOfPets(); i++)
+        for (int i = 0; i < c1.getNumberOfPets(); i++)
             System.out.println(c1.getpetlist()[i].getID() + " " + c1.getpetlist()[i].getName());
-        System.out.println(c1.getNumerOfPets()); 
+        System.out.println(c1.getNumberOfPets());
         
         System.out.println(" ");
         c1.remove("Morty");
-        for (int i = 0; i < c1.getNumerOfPets(); i++)
+        for (int i = 0; i < c1.getNumberOfPets(); i++)
             System.out.println(c1.getpetlist()[i].getID() + " " + c1.getpetlist()[i].getName());
-        System.out.println(c1.getNumerOfPets());
+        System.out.println(c1.getNumberOfPets());
         
         System.out.println(" ");
         c1.remove("Summer");
-        for (int i = 0; i < c1.getNumerOfPets(); i++)
+        for (int i = 0; i < c1.getNumberOfPets(); i++)
             System.out.println(c1.getpetlist()[i].getID() + " " + c1.getpetlist()[i].getName());
-        System.out.println(c1.getNumerOfPets());
+        System.out.println(c1.getNumberOfPets());
         
         System.out.println(" ");
         c1.remove("Greg");
-        for (int i = 0; i < c1.getNumerOfPets(); i++)
+        for (int i = 0; i < c1.getNumberOfPets(); i++)
             System.out.println(c1.getpetlist()[i].getID() + " " + c1.getpetlist()[i].getName());
-       System.out.println(c1.getNumerOfPets());
+       System.out.println(c1.getNumberOfPets());
         
         
     }

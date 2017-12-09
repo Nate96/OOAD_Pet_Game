@@ -3,7 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package myversion;
 import java.security.SecureRandom;
 
 
@@ -11,24 +10,23 @@ import java.security.SecureRandom;
  *
  * @author braukhoffna
  */
-public class basicInformation {
+public abstract class Demographics {
     private int age; 
     private String name;
     private int uniqueID;
     
-    SecureRandom random = new SecureRandom(); 
+    private SecureRandom random = new SecureRandom();
     
-    public basicInformation(int age, String name)
+    public Demographics(final int age, final String name)
     {
         this.age = age;
         this.name = name; 
         this.uniqueID = generateId();
     }
     
-    public int generateId()
+    int generateId()
     {
        return random.nextInt(10000);
-
     }
     
     public String getID()
@@ -43,7 +41,6 @@ public class basicInformation {
     public String getName() {return name;}
     public void setName(String n) {name = n;}
     public int getIDValue() {return uniqueID;}
-//    
 }
 
 

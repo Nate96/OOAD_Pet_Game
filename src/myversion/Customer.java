@@ -3,69 +3,39 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package myversion;
 
-import java.lang.reflect.Array;
+import java.util.*;
 
 /**
  *
  * @author braukhoffna
  */
-public class Customer extends basicInformation{
-    
-    private final int MAX = 10;
-    private Pet[] listOfPets;
-    private int numberOfPets;
-    
-    public Customer(int a, String n) 
+public class Customer extends Demographics {
+
+    private Map<Integer, Pet> pets = new LinkedHashMap<>();
+    private Map<String, Integer> nameIdMap = new HashMap<>();
+
+    public Customer(final int age, final String name)
     {
-        super(a, n);
-        listOfPets = new Pet[MAX];
-        numberOfPets = 0; 
+        super(age, name);
     }
 
-    public void addPet(Pet p)
+    public void addPet(final Pet pet)
     {
-        if (!isFull())
-        {
-            listOfPets[numberOfPets++] = p;
-            sort();
-        }  
+        pets.put(pet.getIDValue(), pet);
     }
-    
-    public void sort()
+
+    public void remove(final String name)
     {
-        for (int i = 1; i < numberOfPets; i++)
-        {
-            Pet index = listOfPets[i]; int j = i;
-            while (j > 0 && listOfPets[j-1].getIDValue() > index.getIDValue())
-            {
-                listOfPets[j] = listOfPets[j-1];
-                j--;
-            }
-            listOfPets[j] = index;
-        }
-            
+        final Integer petId = nameIdMap.get(name);
+        pets.remove(petId);
+        nameIdMap.remove(name);
     }
-    
-    public void remove(String n)
-    {
-        for (int i = 0; i < numberOfPets; i++ )
-        {
-            if (n == listOfPets[i].getName())
-            {
-                for (int j = i; j < numberOfPets - 1; j++)
-                    listOfPets[j] = listOfPets[j + 1];
-                numberOfPets--;
-            }
-        }
-    }
-    public Pet[] getpetlist(){ return listOfPets; }
-    
-    public int getNumerOfPets() {return numberOfPets;}
-    
-    public boolean isEmpty () {return numberOfPets == 0;}
-    
-    public boolean isFull() {return numberOfPets == MAX;}
-    
+
+
+    public int getNumberOfPets() {return pets.size();}
+
+    public boolean isEmpty () {return pets.isEmpty();}
+
+    public Map getPets(){return pets;}
 }
