@@ -1,5 +1,3 @@
-package myversion;
-
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -15,11 +13,11 @@ public class Prescription {
     private String name; 
     private String frequency; 
     
-    public Prescription(float d, String n, String f)
+    public Prescription(float dose, String name, String frequency)
     {
-        this.dose = d;
-        this.name = n; 
-        this.frequency = f; 
+        this.dose = dose;
+        this.name = name;
+        this.frequency = frequency;
     }
     
     public float getDose(){return dose;}
